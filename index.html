@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    
+  </style>
+
+  <link rel="stylesheet" href="dist/styles.css">
+  <script defer src="dist/main.js"></script>
+</head>
+<body class="text-rg relative">
+  <header class="relative">
+    <div class="container mx-auto py-6 px-4 flex justify-between items-center md:border-b-2 md:border-lightGrayishBlue md:custom-border md:px-0">
+      <div class="left flex flex-row-reverse md:flex-row md:space-x-12">
+        <span class="ml-5 md:m-0"><img src="./images/logo.svg" alt=""></span>
+        <!-- mobile -->
+        <nav class="z-20 mobile-custom absolute overflow-hidden w-0 h-screen inset-0 bg-white transition-all md:hidden">
+          <div class="relative top-24 container mx-auto">
+            <ul class="flex flex-col space-y-4 ml-6">
+              <li class=" w-0 overflow-hidden transition-all"><a class="text-black text-md" href="#">Collections</a></li>
+              <li class="w-0 overflow-hidden transition-all"><a class="text-black text-md" href="#">Men</a></li>
+              <li class="w-0 overflow-hidden transition-all"><a class="text-black text-md" href="#">Women</a></li>
+              <li class="w-0 overflow-hidden transition-all"><a class="text-black text-md" href="#">About</a></li>
+              <li class="w-0 overflow-hidden transition-all"><a class="text-black text-md" href="#">Contact</a></li>
+            </ul>
+          </div>
+          
+        </nav>
+
+        <!-- desktop -->
+        <nav class="hidden md:block">
+          <ul class="flex space-x-6 text-darkGrayishBlue">
+            <li><a class="hover:border-b-2 hover:border-orange pb-8" href="#">Collections</a></li>
+            <li><a class="hover:border-b-2 hover:border-orange pb-8" href="#">Men</a></li>
+            <li><a class="hover:border-b-2 hover:border-orange pb-8" href="#">Women</a></li>
+            <li><a class="hover:border-b-2 hover:border-orange pb-8" href="#">About</a></li>
+            <li><a class="hover:border-b-2 hover:border-orange pb-8" href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="z-20 md:hidden">
+          <img class="" src="./images/icon-menu.svg" alt="">
+          <img class="hidden" src="./images/icon-close.svg" alt="">
+        </button>
+      </div>
+      
+      <div class="right flex justify-between items-center space-x-5">
+        <div class="cart relative cursor-pointer">
+          <img class="h-8 w-8" src="./images/icon-cart.svg" alt="" srcset="">
+          <span class="flex justify-center items-center text-white font-bold rounded-xl bg-orange absolute h-0 w-0 -top-1 -right-2 transition-all cart-item-number"></span>
+        </div>
+        <div class="cursor-pointer h-10 w-10 rounded-full hover:border-2 hover:border-orange"><img src="./images/image-avatar.png" alt=""></div>
+      </div>
+    </div>
+    
+    <!-- cart content -->
+    <div class="cart-content overflow-hidden absolute top-24 z-10 w-full h-0 px-4 transition-all md:px-0 md:w-80 md:right-0">
+      <div class="bg-white rounded-xl w-full h-full shadow-xl md:shadow-2xl">
+        <div class="p-4 custom-border border-b-grayishBlue">
+          <span class="font-bold text-md">Cart</span>
+        </div>
+        <div class="product-container container mx-auto flex flex-col items-center space-y-4 p-4">
+
+          <!-- <div class="item-1 rounded-lg h-14 flex justify-between items-center space-x-4">
+            <img class="h-12 w-12 rounded-lg" src="./images/image-product-1-thumbnail.jpg" alt="">
+            <div class="flex flex-col">
+              <span class="text-darkGrayishBlue">Fall Limited Edition Sneakers</span>
+              <span class="text-darkGrayishBlue">$128 X <strong>$228</strong></span>
+            </div>
+            <img class="cursor-pointer" src="./images/icon-delete.svg" alt="">
+          </div> -->
+        </div>
+      </div>
+      
+    </div>
+  </header>
+
+  <main class=" mb-10 md:mt-10">
+    <section class="container mx-auto md:flex md:justify-center md:items-center md:space-x-16">
+      <article class="w-full relative overflow-hidden xl:w-2/5">
+        <div class="slider md:rounded-xl">
+          <div class="wrapper flex w-full md:rounded-xl">
+            <img class="w-full shrink-0  md:rounded-xl" src="./images/image-product-1.jpg" alt="">
+            <img class="w-full shrink-0  md:rounded-xl" src="./images/image-product-2.jpg" alt="">
+            <img class="w-full shrink-0  md:rounded-xl" src="./images/image-product-3.jpg" alt="">
+            <img class="w-full shrink-0  md:rounded-xl" src="./images/image-product-4.jpg" alt="">
+          </div>
+        </div>
+        <span class="prev-btn cursor-pointer absolute top-2/4 left-5 -mt-5 h-10 w-10 bg-white rounded-full flex justify-center items-center md:hidden"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+        <span class="next-btn cursor-pointer absolute top-2/4 right-5 -mt-5 h-10 w-10 bg-white rounded-full flex justify-center items-center md:hidden"><img src="./images/icon-next.svg" alt="" srcset=""></span>
+        <div class="hidden md:flex md:justify-between md:space-x-5 md:mt-6 thumbnails">
+          <div data-value="1" class="rounded-xl w-20 overflow-hidden cursor-pointer item hover:opacity-80"><img src="./images/image-product-1-thumbnail.jpg" alt=""></div>
+          <div data-value="2" class="rounded-xl w-20 overflow-hidden cursor-pointer item hover:opacity-80"><img src="./images/image-product-2-thumbnail.jpg" alt=""></div>
+          <div data-value="3" class="rounded-xl w-20 overflow-hidden cursor-pointer item hover:opacity-80"><img src="./images/image-product-3-thumbnail.jpg" alt=""></div>
+          <div data-value="4" class="rounded-xl w-20 overflow-hidden cursor-pointer item hover:opacity-80"><img src="./images/image-product-4-thumbnail.jpg" alt=""></div>
+        </div>
+      </article>
+      <article class="container mx-auto py-6 px-6 xl:w-2/4">
+        <h1 class="text-rg text-orange font-bold uppercase pb-2">Sneaker Company</h1>
+        <h2 class="text-xl font-bold">Fall Limited Edition Sneakers</h2>
+        <p class="mt-6 text-darkGrayishBlue">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="flex justify-between items-center mt-6 md:flex-col md:space-x-0 md:space-y-4 md:items-start">
+          <span class="flex items-center space-x-5">
+            <span class="text-xl font-bold">$125.00</span><span class="text-orange py-1 px-2 bg-paleOrange rounded-lg text-md font-bold">50%</span>
+          </span>
+          <span class="text-grayishBlue line-through text-md font-bold">$250.00</span>
+        </div>
+        <div class="md:flex md:space-x-5 md:justify-between md:items-center">
+          <div class="flex justify-between items-center px-6 py-3 rounded-lg bg-lightGrayishBlue mb-5 mt-5 md:w-2/5">
+            <img class="plus cursor-pointer hover:opacity-80" src="./images/icon-plus.svg" alt="">
+            <span class="font-bold text-md num-of-item">0</span>
+            <img class="minus cursor-pointer hover:opacity-80" src="./images/icon-minus.svg" alt="">
+          </div>
+          <button class="add-to-cart rounded-lg bg-orange p-3 text-white flex justify-center space-x-5 w-full md:w-3/5 hover:opacity-80">
+            <img class="text-white" src="./images/icon-cart.svg" alt="" srcset="">
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- lightbox -->
+
+    <section class="change-bg lightbox hidden absolute inset-0 h-full items-center">
+      <article class="mx-auto container z-20 w-96 relative lg:w-1/3 xl:w-1/3">
+        <div class="close-lightbox-btn relative py-5 flex justify-end">
+          <button>
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/>
+              </svg>
+
+          </button>
+        </div>
+        
+        <div class="relative w-full">
+          <div class="overflow-hidden w-full">
+            <div class="slider w-full md:rounded-xl ">
+              <div class="wrapper flex h-96 w-full  md:rounded-xl">
+                <img class="w-full shrink-0 object-cover  md:rounded-xl" src="./images/image-product-1.jpg" alt="">
+                <img class="w-full shrink-0 object-cover  md:rounded-xl" src="./images/image-product-2.jpg" alt="">
+                <img class="w-full shrink-0 object-cover  md:rounded-xl" src="./images/image-product-3.jpg" alt="">
+                <img class="w-full shrink-0 object-cover  md:rounded-xl" src="./images/image-product-4.jpg" alt="">
+              </div>
+
+            </div>
+          </div>
+          
+          <span class="prev-btn cursor-pointer absolute top-2/4 -left-5 -mt-5 h-10 w-10 bg-white rounded-full flex justify-center items-center md:top-2/5"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+          <span class="next-btn cursor-pointer absolute top-2/4 -right-5 -mt-5 h-10 w-10 bg-white rounded-full flex justify-center items-center md:top-2/5"><img src="./images/icon-next.svg" alt="" srcset=""></span>
+        </div>
+
+        
+        <div class="hidden md:flex md:justify-center md:space-x-5 md:mt-6 thumbnails">
+          <div data-value="1" class="relative rounded-xl w-20 overflow-hidden cursor-pointer item hover:after:absolute hover:after:inset-0 hover:after:bg-grayishBlue hover:after:opacity-75"><img src="./images/image-product-1-thumbnail.jpg" alt=""></div>
+          <div data-value="2" class="relative rounded-xl w-20 overflow-hidden cursor-pointer item hover:after:absolute hover:after:inset-0 hover:after:bg-grayishBlue hover:after:opacity-75"><img src="./images/image-product-2-thumbnail.jpg" alt=""></div>
+          <div data-value="3" class="relative rounded-xl w-20 overflow-hidden cursor-pointer item hover:after:absolute hover:after:inset-0 hover:after:bg-grayishBlue hover:after:opacity-75"><img src="./images/image-product-3-thumbnail.jpg" alt=""></div>
+          <div data-value="4" class="relative rounded-xl w-20 overflow-hidden cursor-pointer item hover:after:absolute hover:after:inset-0 hover:after:bg-grayishBlue hover:after:opacity-75"><img src="./images/image-product-4-thumbnail.jpg" alt=""></div>
+        </div>
+    </article>
+    </section>
+    
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-orange">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/DaveMan-stack" class="text-orange">David Conteh</a>.
+  </div>
+</body>
+</html>
