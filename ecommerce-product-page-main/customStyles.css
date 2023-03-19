@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom styles */
+
+h2 {
+    line-height: 38px;
+}
+
+/* :root {
+    --grayishBlue: 'hsl(220, 14%, 75%)',
+    --darkGrayishBlue: 'hsl(219, 9%, 45%)'
+} */
+
+.change-bg:after, .active:after {
+    content: '';
+    position:absolute;
+    inset: 0;
+    z-index: 0;
+    background: black;
+    opacity: 75%;
+}
+
+header.show-nav .mobile-custom {
+    width: 75%;
+    transition: width .25s linear;
+}
+
+/* delay list */
+
+
+header.show-nav ul li {
+    width: 100%;
+    border: 0;
+    transition: width 5s linear;
+}
+
+button img:last-child {
+    display:none;
+}
+
+.show-nav button img:last-child {
+    display: block;
+}
+
+.show-nav button img:first-child {
+    display:none;
+}
+
+.custom-border {
+    border-bottom-width: 1px;
+}
+
+/* show-number-of-items in cart */
+.show-cart-item-number {
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    /* transition: height .45s linear; */
+    
+}
+
+/* show cart */
+.show-cart, .preview-cart {
+    height: 240px;
+    opacity: 1;
+    animation: overflowVisible 2s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overflowVisible {
+    0% {
+        overflow: hidden;
+    }
+
+    50%, 100% {
+        overflow: visible;
+    }
+}
+
+.show-cart {
+    display: block;
+}
+
+.cart-content.preview-cart {
+    
+    transition: height .45s ease;
+    /* animation: extendHeight 2s ease; */
+}
+
+/* show lightbox */
+.show-lightbox {
+    display: flex;
+
+}
+
+.active {
+    border: 2px solid hsl(26, 100%, 55%);
+    
+}
+
+.active:after {
+    background-color: hsl(220, 14%, 75%);
+}
+
+/* @keyframes extendHeight {
+    0% {
+        display: block;
+        height: 0;
+    }
+
+    50% {
+        height: 120px;
+    }
+
+    100% {
+        height: 240px;
+    }
+} */

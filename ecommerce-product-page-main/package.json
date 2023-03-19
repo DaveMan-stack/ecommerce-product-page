@@ -1,0 +1,12 @@
+{
+  "name": "tailwindcss",
+  "version": "1.0.0",
+  "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build":"tailwindcss -i ./customStyles.css -o dist/style.css",
+    "watch":"tailwindcss -i ./customStyles.css -o dist/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
